@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, cite the repository and its version."
+title: "C. elegans pharynx quantification"
+authors:
+  - family-names: Yang
+    given-names: Zhou
+repository-code: "https://github.com/TonyYanggg/C.-elegans-Pharynx-Infection-Quantification"
+version: 0.1.0
+date-released: 2026-10-19
+license: "NOASSERTION"

@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "celegans-pharynx-quant"
+version = "0.1.0"
+description = "Human-guided quantification of RFP signal in the C. elegans posterior pharyngeal bulb"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "napari[pyqt6]>=0.5,<1",
+  "tifffile>=2024.8",
+  "numpy>=1.26",
+  "scikit-image>=0.24",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+celegans-pharynx-quant = "celegans_pharynx_quant.app:main"
+cephq-measure = "celegans_pharynx_quant.cli:main"
+cephq-demo = "celegans_pharynx_quant.demo:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
